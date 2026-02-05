@@ -1,11 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Intro Website</title>
+  <title>Sougoto Mondal | Intro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* General body style */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Profile image */
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+    }
+
+    /* Name and bio */
+    h1 {
+      margin: 20px 0 10px 0;
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 18px;
+      opacity: 0.85;
+      max-width: 500px;
+    }
+
+    /* Links/buttons */
+    .links {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 220px;
+    }
+
+    .links a {
+      padding: 12px;
+      background: white;
+      color: #000;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .links a:hover {
+      background: gold;
+      color: black;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      h1 { font-size: 28px; }
+      p { font-size: 16px; }
+      .links { width: 180px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello 👋</h1>
-  <p>This is my first GitHub Pages website.</p>
+  <!-- Profile Image -->
+  <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img">
+
+  <!-- Name and Intro -->
+  <h1>Sougoto Mondal</h1>
+  <p>Hi! I’m Sougoto. This is my personal intro page. Connect with me on social media or check out my portfolio below.</p>
+
+  <!-- Links -->
+  <div class="links">
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+    <a href="https://youtube.com" target="_blank">YouTube</a>
+    <a href="https://github.com/sougotomondal" target="_blank">GitHub</a>
+    <a href="#">Contact</a>
+  </div>
 </body>
 </html>
+
