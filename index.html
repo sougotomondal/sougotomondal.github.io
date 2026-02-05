@@ -1,92 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Sougoto Mondal | Intro</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* General body style */
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      text-align: center;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+<meta charset="UTF-8">
+<title>Sougoto Mondal | Personal & Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    /* Profile image */
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 4px solid #fff;
-      object-fit: cover;
-    }
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-    /* Name and bio */
-    h1 {
-      margin: 20px 0 10px 0;
-      font-size: 36px;
-    }
+<style>
+/* Reset & Global */
+* { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
+body { font-family: 'Poppins', sans-serif; }
 
-    p {
-      font-size: 18px;
-      opacity: 0.85;
-      max-width: 500px;
-    }
+/* Navbar */
+nav {
+  position: fixed;
+  top:0; width:100%;
+  background: rgba(0,0,0,0.7);
+  padding:15px 30px;
+  display:flex; justify-content:flex-end; gap:25px; z-index:100;
+}
+nav a {
+  color:white; font-weight:600;
+  transition:0.3s;
+}
+nav a:hover { color: gold; }
 
-    /* Links/buttons */
-    .links {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      width: 220px;
-    }
+/* Hero / Intro */
+.hero {
+  height:100vh;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:white; display:flex; flex-direction:column; justify-content:center; align-items:center;
+  text-align:center; padding:0 20px;
+  position:relative; overflow:hidden;
+}
+.hero img {
+  width:160px; height:160px; border-radius:50%; border:4px solid #fff; object-fit:cover;
+  animation: fadeIn 2s ease forwards;
+}
+.hero h1 { margin:20px 0 10px; font-size:42px; animation: fadeIn 2s 0.5s ease forwards; opacity:0; }
+.hero p { font-size:18px; max-width:600px; opacity:0.85; animation: fadeIn 2s 1s ease forwards; }
 
-    .links a {
-      padding: 12px;
-      background: white;
-      color: #000;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+/* Services */
+.services {
+  padding:100px 20px;
+  background:#f5f5f5;
+  text-align:center;
+}
+.services h2 { font-size:36px; margin-bottom:50px; color:#203a43; }
+.service-cards {
+  display:flex; justify-content:center; flex-wrap:wrap; gap:30px;
+}
+.card {
+  background:white; padding:25px; width:250px; border-radius:15px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.1); transition:0.4s;
+}
+.card:hover { transform: translateY(-10px); box-shadow:0 8px 25px rgba(0,0,0,0.2); }
+.card h3 { margin-bottom:12px; color:#0f2027; }
+.card p { font-size:14px; opacity:0.8; }
 
-    .links a:hover {
-      background: gold;
-      color: black;
-    }
+/* Contact */
+.contact {
+  padding:80px 20px; background:#203a43; color:white; text-align:center;
+}
+.contact h2 { font-size:36px; margin-bottom:35px; }
+.contact a {
+  display:inline-block; margin:10px; padding:12px 25px;
+  background:white; color:black; font-weight:bold; border-radius:30px; transition:0.3s;
+}
+.contact a:hover { background: gold; color:black; }
 
-    /* Responsive */
-    @media (max-width: 480px) {
-      h1 { font-size: 28px; }
-      p { font-size: 16px; }
-      .links { width: 180px; }
-    }
-  </style>
+/* Footer */
+footer {
+  text-align:center; padding:20px; background:#0f2027; color:#ccc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity:0; transform: translateY(20px);}
+  100% { opacity:1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .service-cards { flex-direction:column; align-items:center; }
+  nav { justify-content:center; gap:15px; }
+  .hero h1 { font-size:32px; }
+  .hero p { font-size:16px; }
+  .services h2 { font-size:28px; }
+}
+</style>
 </head>
 <body>
-  <!-- Profile Image -->
-  <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img">
 
-  <!-- Name and Intro -->
+<!-- Navbar -->
+<nav>
+  <a href="#hero">Home</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- Hero / Intro -->
+<section class="hero" id="hero">
+  <img src="https://via.placeholder.com/160" alt="Profile Picture">
   <h1>Sougoto Mondal</h1>
-  <p>Hi! I’m Sougoto. This is my personal intro page. Connect with me on social media or check out my portfolio below.</p>
+  <p>Hello! I’m Sougoto. I create modern websites, portfolios, and graphics for individuals and businesses. Scroll down to see my services and contact me.</p>
+</section>
 
-  <!-- Links -->
-  <div class="links">
-    <a href="https://facebook.com" target="_blank">Facebook</a>
-    <a href="https://youtube.com" target="_blank">YouTube</a>
-    <a href="https://github.com/sougotomondal" target="_blank">GitHub</a>
-    <a href="#">Contact</a>
+<!-- Services -->
+<section class="services" id="services">
+  <h2>My Services</h2>
+  <div class="service-cards">
+    <div class="card">
+      <h3>Web Design</h3>
+      <p>Modern, responsive website design tailored for your brand.</p>
+    </div>
+    <div class="card">
+      <h3>Frontend Development</h3>
+      <p>Interactive and fast-loading websites using HTML, CSS & JS.</p>
+    </div>
+    <div class="card">
+      <h3>Portfolio Setup</h3>
+      <p>Professional portfolios to showcase your work online.</p>
+    </div>
+    <div class="card">
+      <h3>Social Media Graphics</h3>
+      <p>Attractive banners and graphics for social media campaigns.</p>
+    </div>
   </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <a href="mailto:youremail@example.com">Email Me</a>
+  <a href="https://facebook.com" target="_blank">Facebook</a>
+  <a href="https://youtube.com" target="_blank">YouTube</a>
+</section>
+
+<!-- Footer -->
+<footer>
+  &copy; 2026 Sougoto Mondal. All rights reserved.
+</footer>
+
 </body>
 </html>
-
